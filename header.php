@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>チーズアカデミーTOKYO</title>
+    <title><?php bloginfo('name'); ?></title>
     <meta charset="UTF-8">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/jquery-2.1.0.min.js"></script>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
+    <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-2.1.0.min.js"></script>
     <script>
     $(function(){
         $(window).on("ready resize",function(){
@@ -25,7 +25,7 @@
     <!-- header  -->
     <header id="header">
        <div class="inner clearfix">
-        <h1 class="logo"><img src="image/logo-top.png" alt="Cheese Academy Tokyo" /></h1>
+        <h1 class="logo"><img src="<?php echo get_template_directory_uri(); ?>/image/logo-top.png" alt="Cheese Academy Tokyo" /></h1>
         <ul class="note_wrap">
             <li>CHEESE DEVELOPMENT</li>
             <li>GROWTH CHEESE</li>
@@ -42,11 +42,11 @@
         </div>
         <div class="slider">
             <ul class="slides clearfix">
-                <li><img src="image/photo-mini.png" alt="" /></li>
-                <li><img src="image/photo-mini.png" alt="" /></li>
-                <li class="center"><img src="image/photo-main.png" alt="" /></li>
-                <li><img src="image/photo-mini.png" alt="" /></li>
-                <li><img src="image/photo-mini.png" alt="" /></li>
+                <li><img src="<?php echo get_template_directory_uri(); ?>/image/photo-mini.png" alt="" /></li>
+                <li><img src="<?php echo get_template_directory_uri(); ?>/image/photo-mini.png" alt="" /></li>
+                <li class="center"><img src="<?php echo get_template_directory_uri(); ?>/image/photo-main.png" alt="" /></li>
+                <li><img src="<?php echo get_template_directory_uri(); ?>/image/photo-mini.png" alt="" /></li>
+                <li><img src="<?php echo get_template_directory_uri(); ?>/image/photo-mini.png" alt="" /></li>
             </ul>
         </div>
 
