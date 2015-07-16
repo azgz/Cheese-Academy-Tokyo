@@ -6,12 +6,14 @@
         <p class="section-note">お知らせ・更新情報</p>
         <div class="inner">
             <dl class="news-list clearfix">
-                <dt class="news-list--date">2015.04.11</dt>
-                <dd class="news-list--note"><a href="#">初日開講オリエンテーションが行われました！</a></dd>
-                <dt class="news-list--date">2015.04.08</dt>
-                <dd class="news-list--note"><a href="#">主席講師インタービューが更新されました！</a></dd>
-                <dt class="news-list--date">2015.03.21</dt>
-                <dd class="news-list--note"><a href="#">トーキョーチーズFesを開催いたしました！</a></dd>
+        	<?php if (have_posts()) : ?>
+        		<?php while (have_posts()) : the_post(); ?>
+                <dt class="news-list--date"><?php the_time('Y.m.d'); ?></dt>
+                <dd class="news-list--note"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></dd>
+        		<?php endwhile; ?>
+        	<?php else : ?>
+        		<h3>No News</h3>
+        	<?php endif; ?>
             </dl>
             <p class="news-note__more"><a href="news.html">ニュース一覧を見る</a></p>
         </div>
@@ -99,7 +101,7 @@
             <ul class="cource-list">
                 <li class="clearfix">
                     <div class="cource-cap">
-                        <img src="image/cource.png" alt="" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/image/cource.png" alt="" />
                     </div>
                     <div class="cource-summary">
                         <h4>LABコース</h4>
@@ -114,7 +116,7 @@
                 </li>
                 <li class="clearfix">
                     <div class="cource-cap-reverse">
-                        <img src="image/cource.png" alt="" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/image/cource.png" alt="" />
                     </div>
                     <div class="cource-summary-reverse">
                         <h4>LABコース</h4>
@@ -140,18 +142,18 @@
         </div>
         <div class="inner">
             <ul class="gallery-list clearfix">
-                <li><a href=""><img src="image/gallery01.jpg" alt="" /></a></li>
-                <li><a href=""><img src="image/gallery01.jpg" alt="" /></a></li>
-                <li><a href=""><img src="image/gallery01.jpg" alt="" /></a></li>
-                <li class="no-white-space"><a href=""><img src="image/gallery01.jpg" alt="" /></a></li>
-                <li><a href=""><img src="image/gallery01.jpg" alt="" /></a></li>
-                <li><a href=""><img src="image/gallery01.jpg" alt="" /></a></li>
-                <li><a href=""><img src="image/gallery01.jpg" alt="" /></a></li>
-                <li class="no-white-space"><a href=""><img src="image/gallery01.jpg" alt="" /></a></li>
-                <li><a href=""><img src="image/gallery01.jpg" alt="" /></a></li>
-                <li><a href=""><img src="image/gallery01.jpg" alt="" /></a></li>
-                <li><a href=""><img src="image/gallery01.jpg" alt="" /></a></li>
-                <li class="no-white-space"><a href=""><img src="image/gallery01.jpg" alt="" /></a></li>
+                <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/image/gallery01.jpg" alt="" /></a></li>
+                <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/image/gallery01.jpg" alt="" /></a></li>
+                <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/image/gallery01.jpg" alt="" /></a></li>
+                <li class="no-white-space"><a href=""><img src="<?php echo get_template_directory_uri(); ?>/image/gallery01.jpg" alt="" /></a></li>
+                <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/image/gallery01.jpg" alt="" /></a></li>
+                <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/image/gallery01.jpg" alt="" /></a></li>
+                <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/image/gallery01.jpg" alt="" /></a></li>
+                <li class="no-white-space"><a href=""><img src="<?php echo get_template_directory_uri(); ?>/image/gallery01.jpg" alt="" /></a></li>
+                <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/image/gallery01.jpg" alt="" /></a></li>
+                <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/image/gallery01.jpg" alt="" /></a></li>
+                <li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/image/gallery01.jpg" alt="" /></a></li>
+                <li class="no-white-space"><a href=""><img src="<?php echo get_template_directory_uri(); ?>/image/gallery01.jpg" alt="" /></a></li>
             </ul>
         </div>
     </section>
