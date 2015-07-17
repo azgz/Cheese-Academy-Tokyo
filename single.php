@@ -1,6 +1,8 @@
 <?php get_header(); ?>
         <!--news_lower    -->
         <section id="news_lower">
+    	<?php if (have_posts()) : ?>
+    		<?php while (have_posts()) : the_post(); ?>
             <div class="news_lower_heading">
             <div class="inner clearfix">
                 <div class="section-heading-wrap">
@@ -20,5 +22,9 @@
                     </li>
                 </ul>
             </div>
+            <?php endwhile; ?>
+        <?php else : ?>
+        	<h3>No News</h3>
+        <?php endif; ?>
         </section>
 <?php get_footer(); ?>
